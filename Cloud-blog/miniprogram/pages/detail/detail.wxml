@@ -1,0 +1,86 @@
+<!-- <view class="page-container">
+  <view class="user-blog-info" vx:if="{{topic.userInfo}}">
+    <view >
+      <image class="user-img" src="{{topic.userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="user-detail">
+      <view class="user-name">{{topic.userInfo.nickName}}</view>
+      <view class="push-time">{{topic.date_display}}</view>
+    </view>
+  </view>
+  <view class="blog-text">{{topic.content}}</view>
+  <view class="blog-resource">
+    <image class="resource-item" wx:if="{{topic.imageUrl}}" data-url="{{topic.imageUrl}}" catchtap="handlePreviewImage" src="{{topic.imageUrl}}" mode="widthFix"></image>
+    <video class="resource-item" wx:if="{{topic.videoUrl}}" src="{{topic.videoUrl}}" id="{{'video_' + topic._id}}" controls="{{false}}" objectFit="cover">
+    </video>
+  </view>
+  <view class="login-container" wx:if="{{!userInfo.nickName}}">
+    <button class="blog-login"
+      hover-class="login-btn_hover" 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo">
+      登录后评论
+    </button>
+  </view>
+  <view class="disscuss" wx:if="{{userInfo.nickName}}">
+    <textarea class="disscuss-input" placeholder="评论点啥">
+      <view class="disscuss-btn">评论</view>
+    </textarea>
+  </view>
+  <view class="reply-list">
+    <view class="reply-item">
+      <view class="user-reply-info">
+        <view class="user-img"></view>
+        <view class="user-detail">
+          <view class="user-name">蒋蒋蒋</view>
+          <view class="user-reply">专吃猕猴桃</view>
+        </view>
+      </view>
+      <view class="reply-time">2019-11-26 17:25:56</view>
+    </view>
+  </view>
+</view> -->
+
+<view class="page-container">
+  <view class="topic-container">
+    <view class="topic-userInfo">
+      <image class="topic-userInfo-avatar" src="{{topic.userInfo.avatarUrl}}"></image>
+      <view class="topic-userInfo-content">
+        <view class="topic-userInfo-nickName">{{topic.userInfo.nickName}}</view> 
+        <veiw class="topic-userInfo-date_display">{{topic.date_display}}</veiw>
+      </view>
+    </view>
+    <view class="topic-content">{{topic.content}}</view>
+    <view class="topics-resource">
+      <image wx:if="{{topic.imageUrl}}" class="resource-item" data-url="{{topic.imageUrl}}" catchtap="handlePreviewImage" src="{{topic.imageUrl}}" mode="widthFix"></image>
+      <video wx:if="{{topic.videoUrl}}" class="resource-item" src="{{topic.videoUrl}}" id="{{'video_' + topic._id}}" controls="{{false}}" objectFit="cover">
+        <cover-view class="resource-video-controls" data-id="{{'video_' + topic._id}}"  catchtap="handlePreviewVideo"></cover-view>
+      </video>
+    </view>
+  </view>
+
+  <!-- 登录模块 -->
+  <view class="login-container" wx:if="{{!userInfo.nickName}}">
+    <button class="login-btn" hover-class="login-btn_hover">登录后评论</button>
+  </view>
+
+  <!-- 评论功能模块 -->
+  <view class="textarea-container" wx:if="{{userInfo.nickName}}">
+    <textarea class="textarea-input" placeholder="评论点啥" bindinput="handleChange" value="{{message}}"></textarea>
+    <button class="textarea-btn" bindtap="handleSubmit">评论</button>
+  </view>
+
+  <!-- 评论列表模块 -->
+  <view class="reply-container">
+    <view class="reply-item" wx:for="{{replies}}" wx:key="unique">
+      <image class="reply-ft reply-avatar" src="{{item.userInfo.avatarUrl}}"></image>
+      <view class="reply-bd">
+        <view class="reply-nickName">{{item.userInfo.nickName}}</view>
+        <view class="reply-content">{{item.content}}</view>
+        <view class="reply-info">
+          <text class="reply-reply-date">{{item.date_display}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

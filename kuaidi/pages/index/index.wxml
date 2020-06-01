@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="page-container">
+  <view class="page-content">
+    <view class="loge-container">
+      <image class="loge-img" src="/images/jd.gif"></image>    
+    </view>
+    <view class="form-item">
+      <input class="form-item-input" type="number"  placeholder="请输入快递单号"
+      placeholder-class="form-item-input_placeholder" bindinput="handleChange"/>
+    </view>
+    <view class="form-item">
+      <button class="form-item-btn" hover-class="form-item-btn_hover" bindtap="handleSubmit">提交</button>
+    </view>
+    <view class="form-item">
+      <button class="form-item-btn" hover-class="form-item-btn_hover" bindtap="handleScancode">提交快递条形码</button>
+    </view>
+  </view>
+</view>

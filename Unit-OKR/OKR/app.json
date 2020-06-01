@@ -1,0 +1,46 @@
+{
+  "pages": [ 
+    "pages/welcome/welcome",
+    "pages/todo/todo",
+    "pages/todo_keyresult/todo_keyresult",
+    "pages/keyresults/keyresults",
+    "pages/history/history",
+    "pages/okr/okr",
+    "pages/okrcreate/okrcreate",
+    "pages/okredit/okredit",
+    "pages/okrdetail/okrdetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F5F5F5",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#F5F5F5",
+    "color": "#999",
+    "selectedColor": "#333",
+    "list": [
+      {
+        "pagePath": "pages/todo/todo",
+        "text": "todo",
+        "iconPath":"/images/tran.png",
+        "selectedIconPath":"/images/tranchoose.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "done",
+        "iconPath":"/images/yuan.png",
+        "selectedIconPath":"/images/yuanchoose.png"
+      },
+      {
+        "pagePath": "pages/okr/okr",
+        "text": "okr",
+        "iconPath":"/images/okr.png",
+        "selectedIconPath":"/images/okrchoose.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,41 @@
+.page-container{
+  height: 100%;
+  /* padding: 15px 10px 0; */
+  font-size: 18px;
+}
+.todo-title{
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.todo-input-container{
+  height: 80rpx;
+  border: 4rpx solid #999;
+  line-height: 80rpx;
+}
+.todo-input{
+  height: 80rpx;
+  padding: 0 20rpx;
+  line-height: 80rpx;
+  color: #666;
+}
+.todo-list{
+  margin-top: 20rpx;
+}
+.todo-list-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 120rpx;
+  padding: 20rpx 20rpx;
+  margin-top: 10rpx;
+  background: #F5F5F5;
+}
+.todo-list-item-title{
+  font-size: 32rpx;
+  color: #333;
+}
+.todo-list-item-createtime{
+  font-size: 28rpx;
+  color:#999;
+}

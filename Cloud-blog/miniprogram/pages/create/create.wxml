@@ -1,0 +1,7 @@
+<!--pages/create/create.wxml-->
+<view class="page-container">
+  <!-- <view id="editor" bindtap="aaa">今天也是元气满满呢！</view> -->
+  <textarea id="editor" bindinput="handleChange" placeholder="今天也是要恰饭的一天"></textarea>
+  <view class="blog-add" bindtap="handleupLoad">+</view>
+  <view class="blog-push" hover-class="blog-push_hover" bindtap="handlesubmit">发布</view>
+</view>

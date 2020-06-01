@@ -1,0 +1,27 @@
+<!--pages/okrcreate/okrcreate.wxml-->
+<view class="page-container">
+  <view class="okrcreate-list">
+    <view class="okrcreate-item">
+      <view class="okrcreate-item-title">
+        Objective 目标:
+      </view>
+      <view class="okrcreate-item-input">
+        <input class="okrcreate-input" placeholder="请输入你的目标" bindinput="handlechangeobj" />
+        <view class="add-reduce" bindtap="handleaddkeyresult">+</view>
+      </view>
+    </view>
+    <view class="okrcreate-item" wx:for="{{keyresult}}" wx:key="unique">
+      <view class="okrcreate-item-title">
+        Keyresult 成果:
+      </view>
+      <view class="okrcreate-item-input">
+        <input class="okrcreate-input" placeholder="请输入你的成果" bindinput="handlechangekr" data-index="{{index}}" value="{{item.title}}"/>
+        <view class="add-reduce" bindtap="handledeletekeyresult" data-index="{{index}}">-</view>
+      </view>
+    </view> 
+  </view>
+  <view class="page-footer">
+    <button class="submit-btn" hover-class="submit-btn_hover" bindtap="handleSubmit">新增</button>
+  </view>
+</view> 
+

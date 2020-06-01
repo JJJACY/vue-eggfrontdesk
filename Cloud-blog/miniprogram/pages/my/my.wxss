@@ -1,0 +1,67 @@
+/* pages/my/my.wxss */
+.page-container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.user-info{
+  height: 120px;
+  width: 335px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 10px solid #F5F5F5;
+  font-size: 22px;
+}
+.user-img{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+}
+.blog-list{
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+.blog-item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding:0 10px;
+  font-size: 16px;
+  color: #999;
+  border-bottom: 1px solid #F5F5F5;
+}
+.blog-item:after{
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 20px;
+  right: 15px;
+  content:'';
+  display:inline-block;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-bottom: 2px solid #999;
+  border-right: 2px solid #999;
+}
+
+.submit-btn{
+  position: absolute;
+  bottom: 60px;
+  left: 95.5px;
+  width: 250px;
+  height: 50px;
+  font-size: 16px;
+  line-height:34px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+.submit-btn_hover{
+  opacity: .7;
+}

@@ -1,0 +1,26 @@
+<!--pages/okredit/okredit.wxml-->
+<view class="page-container">
+  <view class="okrcreate-list">
+    <view class="okrcreate-item">
+      <view class="okrcreate-item-title" >
+        Objective 目标:
+      </view>
+      <view class="okrcreate-item-input">
+        <input class="okrcreate-input" value="{{okr.title}}" placeholder="{{okr.title}}" bindinput="handlechangeobj"/>
+        <view class="add-reduce" bindtap="handleaddkeyresult">+</view>
+      </view>
+    </view>
+    <view class="okrcreate-item" wx:for="{{keyresult}}" wx:key="unique">
+      <view class="okrcreate-item-title">
+        Keyresult 成果:
+      </view>
+      <view class="okrcreate-item-input">
+        <input class="okrcreate-input" value="{{item.title}}" placeholder="请输入你的成果" bindinput="handlechangekr" data-index="{{index}}"/>
+        <view class="add-reduce" bindtap="handledeletekeyresult" data-index="{{index}}" data-id="{{item.id}}">-</view>
+      </view>
+    </view> 
+  </view>
+  <view class="page-footer">
+    <button class="submit-btn" hover-class="submit-btn_hover" bindtap="handleSubmit">保存</button>
+  </view>
+</view>

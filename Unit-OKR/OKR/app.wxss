@@ -1,0 +1,13 @@
+/**app.wxss**/
+page{
+  height: 100%;
+  font-size: 32px;
+  font-family: arial;
+  color: #333;
+  line-height: 1.6;
+} 
+.page-container{
+  height: 100%;
+  padding: 15px 10px 0;
+}
+

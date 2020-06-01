@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/node/node",
+    "pages/show/show",
+    "pages/topics/topics"
+  ],
+  "window": {
+    "navigationBarTitleText": "V2EX"
+  },
+  "tabBar": {
+    "color":"#999",
+    "selectedColor":"#333",
+    "background":"#000",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "最新",
+      "iconPath":"/images/new.png",
+      "selectedIconPath":"/images/newactive.png"
+    }, {
+      "pagePath": "pages/node/node",
+      "text": "标签",
+      "iconPath":"/images/tag.png",
+      "selectedIconPath":"/images/tagactive.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

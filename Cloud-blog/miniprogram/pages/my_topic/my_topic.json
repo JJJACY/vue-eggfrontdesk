@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "CLOUD BLOG",
+  "backgroundColor": "#000",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "custom-topics": "/components/topic/topic"
+  }
+}

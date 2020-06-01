@@ -1,0 +1,36 @@
+.page-container{
+    background: #f5f5f5;
+}
+.topic-container{
+    padding: 30rpx;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.topic-userInfo{
+    display: flex;
+    margin-bottom: 10px;
+}
+.topic-userInfo .topic-userInfo-avatar{
+    flex: none;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 8rpx;
+    margin-right: 16rpx;
+    background: #f5f5f5;
+}
+.topic-userInfo .topic-userInfo-username{
+    font-size: 24rpx;
+    color: #666;
+    display: flex;
+    align-items: flex-end;
+}
+.topic-content .topic-title{
+    font-size: 32rpx;
+    color: #333;
+    margin-bottom: 20rpx;
+}
+.topic-content .topic-description{
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
+}

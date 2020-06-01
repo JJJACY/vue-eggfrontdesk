@@ -1,0 +1,17 @@
+<!--logs.wxml-->
+<view class="page-container">
+  <view class="detail-info">
+    <image class="jd-img" src="/images/jd.gif"></image>
+    <view class="detail-info-text" wx:if="{{detailList.length}}">
+      <view>订单号:{{order_id}}</view>
+      <view>信息来源: 京东快递</view>
+      <view class="detail-info-text" wx:if="{{!detailList.length}}">{{toastText}}</view>
+    </view>
+  </view>
+  <view class="detail-list">
+    <view class="detail-item" wx:for="{{detailList}}" wx:key="unique" wx:for-item="detail">
+      <view class="detail-item-context">{{detail.status}}</view>
+      <view class="detail-item-date">{{detail.time}}</view>
+    </view>
+  </view>
+</view>

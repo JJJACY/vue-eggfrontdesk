@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#f5f5f5",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "NEW BLOG",
+  "backgroundColor": "#000",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}

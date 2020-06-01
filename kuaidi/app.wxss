@@ -1,0 +1,11 @@
+/**app.wxss**/
+page{
+  height: 100%;
+  font-size: 16px;
+  line-height:1.6;
+  font-family:arial;
+  box-sizing: border-box;
+} 
+.page-container{
+  height: 100%;
+}

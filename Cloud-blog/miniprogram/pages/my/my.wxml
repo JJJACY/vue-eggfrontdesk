@@ -1,0 +1,16 @@
+<!--pages/my/my.wxml-->
+<view class="page-container">
+  <!-- <view class="submit-btn" hover-class="submit-btn_hover" wx:if="{{userInfo.nickName}}">授权登陆使用</view> -->
+  <view class="user-info" wx:if="{{userInfo.nickName}}">
+    <text>{{userInfo.nickName ? userInfo.nickName : '未登录'}}</text>
+    <!-- <view class="class-user-name">{{userInfo.nickName}}</view> -->
+    <image class="user-avatarUrl user-img" src="{{userInfo.avatarUrl}}"></image>
+    <!-- <open-data class="user-img" type="userAvatarUrl"></open-data> -->
+  </view>
+  <view class="blog-list" wx:if="{{userInfo.nickName}}">
+    <view class="blog-item" bindtap="navgitortonewblog">Create-Blog</view>
+    <view class="blog-item" bindtap="navgitortomyblog">My-Blog</view>
+    <view class="blog-item" bindtap="navgitortomyreply">MY-Reply</view>
+  </view>
+  <button wx:if="{{!userInfo.nickName}}" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="submit-btn" hover-class="submit-btn_hover">授权登陆使用</button>
+</view>

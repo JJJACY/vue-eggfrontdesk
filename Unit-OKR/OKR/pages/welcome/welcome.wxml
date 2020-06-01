@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="page-container">
+  <button open-type="getUserInfo" bindtap="handlesubmit">立即体验</button>
+</view>

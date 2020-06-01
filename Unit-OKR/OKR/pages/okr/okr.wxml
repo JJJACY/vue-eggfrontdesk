@@ -1,0 +1,11 @@
+<!--pages/okr/okr.wxml-->
+<view class="page-container">
+  <navigator  url="/pages/okrcreate/okrcreate" class="objective-created-btn">添加 OKR</navigator>
+  <view class="objective-list">
+    <view class="objective-item {{item.status === 1 ? 'finished' : ''}}" bindtap="handlecheckout" wx:for="{{objective}}" wx:key="unique" data-id="{{item.id}}" data-index="{{index}}" data-status="{{item.status}}">
+      <view class="objective-title" >{{item.title}}</view>
+      <view class="objective-created_time">· 创建时间：{{item.created_time}}</view>
+      <view class="objective-created_time" wx:if="{{item.finished_time}}">· 完成时间：2019-11-16 21:19:11</view>
+    </view>
+  </view>
+</view>
